@@ -1,0 +1,18 @@
+{
+  // 標準のフォーマッターを Prettier に設定
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 保存時およびペースト時に自動フォーマットを実行する
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
+  // 保存時の実行アクション
+  "editor.codeActionsOnSave": {
+    // import されていないモジュールを自動補完
+    "source.addMissingImports": true
+  },
+
+  // VSCode で import を記述する際に tsconfig の設定に応じて絶対パスとする
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative"
+}
