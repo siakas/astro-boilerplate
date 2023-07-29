@@ -1,0 +1,12 @@
+node_modules/
+.astro/
+dist/
+public/
+package-lock.json
+yarn.lock
+vite.config.ts
+next.config.js
+tsconfig.json
+src/env.d.ts
+*.cjs
+*.mjs
