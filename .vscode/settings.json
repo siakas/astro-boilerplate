@@ -9,10 +9,21 @@
   // 保存時の実行アクション
   "editor.codeActionsOnSave": {
     // import されていないモジュールを自動補完
-    "source.addMissingImports": true
+    "source.addMissingImports": true,
+
+    // ファイル保存時に Stylelint による自動フォーマットを実行する
+    "source.fixAll.stylelint": true
   },
 
   // VSCode で import を記述する際に tsconfig の設定に応じて絶対パスとする
   "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifier": "non-relative"
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // Stylelint とのバッティング回避のため、VS Code 標準の自動整形を無効化（CSS, SCSS, LESS）
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+
+  // Stylelint の実行対象を指定
+  "stylelint.validate": ["html", "css", "scss", "postcss", "astro"]
 }

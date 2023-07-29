@@ -1,0 +1,8 @@
+node_modules/
+.astro/
+dist/
+public/
+*.cjs
+*.mjs
+*.json
+*.txt
