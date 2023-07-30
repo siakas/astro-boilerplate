@@ -11,6 +11,9 @@
     // import されていないモジュールを自動補完
     "source.addMissingImports": true,
 
+    // ファイル保存時に ESLint による自動フォーマットを実行する
+    "source.fixAll.eslint": true,
+
     // ファイル保存時に Stylelint による自動フォーマットを実行する
     "source.fixAll.stylelint": true
   },
@@ -19,11 +22,24 @@
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
 
+  // ESLint の実行対象を定義
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro"
+  ],
+
   // Stylelint とのバッティング回避のため、VS Code 標準の自動整形を無効化（CSS, SCSS, LESS）
   "css.validate": false,
   "scss.validate": false,
   "less.validate": false,
 
   // Stylelint の実行対象を指定
-  "stylelint.validate": ["html", "css", "scss", "postcss", "astro"]
+  "stylelint.validate": ["html", "css", "scss", "postcss", "astro"],
+
+  // Stylelint の実行パスを指定（Path 指定がないとローカル環境で Stylelint が動作しない場合がある）
+  "stylelint.stylelintPath": "node_modules/stylelint"
 }
