@@ -1,5 +1,16 @@
+@use "base/reset";
+@use "base/markdown-content";
 @import "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap";
 
 html {
   font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+}
+
+main {
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.8;
+  }
 }

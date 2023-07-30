@@ -1,0 +1,32 @@
+<nav class="global">
+  <ul>
+    <li><a href="/">ホーム</a></li>
+    <li><a href="/about">私たちについて</a></li>
+    <li><a href="/role">理想の人間像</a></li>
+    <li><a href="/blog">ブログ</a></li>
+  </ul>
+</nav>
+
+<style lang="scss">
+  .global {
+    ul {
+      display: flex;
+      gap: 3rem;
+    }
+
+    a {
+      font-size: 1.125rem;
+      font-weight: bold;
+      line-height: 1.75rem;
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.1s ease;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #6366f1;
+      }
+    }
+  }
+</style>

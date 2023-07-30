@@ -5,5 +5,8 @@ import compress from 'astro-compress'
 
 // https://astro.build/config
 export default defineConfig({
+  server: {
+    open: true,
+  },
   integrations: [react(), mdx(), compress()],
 })

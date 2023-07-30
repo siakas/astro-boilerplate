@@ -1,5 +1,7 @@
 ---
 import '../styles/global.scss'
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
 ---
 
 <html lang="ja">
@@ -11,6 +13,18 @@ import '../styles/global.scss'
     <title>Astro</title>
   </head>
   <body>
-    <slot />
+    <Header />
+    <main class="main">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
+
+<style lang="scss">
+  .main {
+    max-width: 1536px;
+    padding: 2rem 2rem 0;
+    margin: auto;
+  }
+</style>

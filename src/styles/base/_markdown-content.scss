@@ -1,0 +1,51 @@
+.markdown-content {
+  > * + *,
+  > dl > * + * {
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  > h2 {
+    margin-top: 3rem;
+  }
+
+  > h3 {
+    margin-top: 2rem;
+  }
+
+  > h4 {
+    margin-top: 1.5rem;
+  }
+
+  > h5 {
+    margin-top: 1rem;
+  }
+
+  > h6 {
+    margin-top: 1rem;
+  }
+
+  > p {
+    line-height: 1.8;
+
+    strong {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #6366f1;
+    }
+  }
+
+  > pre {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 0.35rem;
+
+    > code {
+      font-family: Menlo, Monaco, Consolas, monospace;
+    }
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}

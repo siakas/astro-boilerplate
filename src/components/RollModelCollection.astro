@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content'
+
+const models = await getCollection('models')
+---
+
+<div class="models">
+  {
+    models.map(async (entry) => {
+      const { Content } = await entry.render()
+      return (
+        <div class="item">
+          <Content />
+        </div>
+      )
+    })
+  }
+</div>
+
+<style lang="scss">
+  .models {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .item {
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+
+    :global(h2) {
+      font-size: 1.875rem;
+      line-height: 1.6;
+    }
+
+    :global(p) {
+      line-height: 1.8;
+    }
+  }
+</style>
