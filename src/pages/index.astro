@@ -3,5 +3,117 @@ import DefaultLayout from '@/layouts/DefaultLayout.astro'
 ---
 
 <DefaultLayout>
-  <div>トップページ</div>
+  <section class="hero">
+    <img
+      src="https://images.unsplash.com/photo-1618004652321-13a63e576b80?auto=format&q=75&fit=crop&w=1500"
+      loading="lazy"
+      alt=""
+    />
+    <div class="bg"></div>
+    <div class="content">
+      <p>Very proud to introduce</p>
+      <h1>Revolutionary way<br />to build the web</h1>
+      <div class="button">
+        <a href="/">Start now</a>
+        <a href="/">Take tour</a>
+      </div>
+    </div>
+  </section>
 </DefaultLayout>
+
+<style lang="scss">
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 12rem 0;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    background-color: #64748b;
+    mix-blend-mode: multiply;
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 40rem;
+    padding: 1rem;
+
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.25rem;
+      line-height: 1.75;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 3rem;
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: 1.1;
+      color: #e2e8f0;
+      text-align: center;
+    }
+  }
+
+  .button {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+
+    a {
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      line-height: 1.5;
+      color: #e2e8f0;
+      text-align: center;
+      text-decoration: none;
+      background-color: #000;
+      border-radius: 0.5rem;
+      transition: all 0.1s ease;
+
+      &:nth-child(1) {
+        background-color: #71717a;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: #52525b;
+        }
+      }
+
+      &:nth-child(2) {
+        color: #6b7280;
+        background-color: #e5e7eb;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: #d1d5db;
+        }
+      }
+    }
+  }
+</style>
