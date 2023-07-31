@@ -8,8 +8,8 @@
 
   // 保存時の実行アクション
   "editor.codeActionsOnSave": {
-    // import されていないモジュールを自動補完
-    "source.addMissingImports": true,
+    // import されていないモジュールを自動補完（astro では Fragment を強制インポートするなど不具合が見られるのでコメントアウト）
+    // "source.addMissingImports": true,
 
     // ファイル保存時に ESLint による自動フォーマットを実行する
     "source.fixAll.eslint": true,
