@@ -22,7 +22,16 @@ const { post } = Astro.props
   <p class="author">執筆者：{post.userId}</p>
 
   <article class="body">
-    {post.body}
+    <div class="image">
+      <img
+        src={`https://picsum.photos/id/${post.id * 4}/600/750`}
+        alt=""
+        loading="lazy"
+      />
+    </div>
+    <div class="postcontent">
+      {post.body}
+    </div>
   </article>
 
   <p class="back"><a href="/blog">記事一覧に戻る</a></p>
@@ -34,9 +43,29 @@ const { post } = Astro.props
   }
 
   .body {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
     margin: 2rem 0;
-    font-size: 1.25em;
-    line-height: 1.8;
+
+    .image {
+      overflow: hidden;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 15px -3px rgba(#000, 0.1),
+        0 4px 6px -4px rgba(#000, 0.1);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .postcontent {
+      font-size: 1.5em;
+      line-height: 1.8;
+    }
   }
 
   .back {

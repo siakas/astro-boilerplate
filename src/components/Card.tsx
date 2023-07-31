@@ -12,7 +12,7 @@ const Card = ({ id, title }: CardProps) => {
       className={styles.card}
     >
       <img
-        src={`https://picsum.photos/id/${id * 4}/600/600`}
+        src={`https://picsum.photos/id/${id * 4}/400/400`}
         alt=""
         loading="lazy"
         className={styles.image}
